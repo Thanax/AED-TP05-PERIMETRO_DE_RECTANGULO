@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+double GetPosNum();   //declaración o prototipo de la función
+double GetPerim(double, double);
+
+int main()
+{
+    double b;
+    double h;
+    cout<<"Introduza un numero positivo que sirva como la base del rectangulo"<< endl;
+    b = GetPosNum();
+    cout<<"Introduza un numero positivo que sirva como la altura del rectangulo"<< endl;
+    h = GetPosNum();
+    cout<<"El Perimetro del rectangulo ingresado es: " << GetPerim(b, h) << endl;
+    system("pause"); 
+}
+
+double GetPosNum()   //definición de la función    
+{
+    double n;
+    cin >> n;
+    while ( n <= 0) {
+       cout<<"El numero ingresado NO es mayor a cero, ingrese algo con sentido" << endl;
+       cin >> n;
+ }
+    return n;
+}
+
+double GetPerim(double bas, double alt)
+{
+    double per;
+    per = ((bas * 2 ) + (alt * 2));
+    return per;
+}
+    
